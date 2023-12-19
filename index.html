@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giáng sinh</title>
+</head>
+<body>
+    <div class="background">
+        <div class="item item1">
+            <img src="image/qua1.jpg" alt="Quà">
+            <a href="https://scontent.fhan17-1.fna.fbcdn.net/v/t1.6435-9/64953660_685320698567145_1104481540592631808_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=WyJ7yjrnkjAAX_RebX6&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDKx9bW0aUU17UDc1IoCTvvPbf-I1wO6Bm0wu7wgbWbFg&oe=6598DB86">Quà Noel</a>
+        </div>
+
+        <div class="item item2">
+            <img src="image/qua2.jpg" alt="Quà">
+            <a href="https://scontent.fhan17-1.fna.fbcdn.net/v/t1.6435-9/115933402_972000326565846_2942037214925119278_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=MKB5b3cK5lkAX-0bRru&_nc_oc=AQkbOvCpsLpz-QxyoaEd0ND1E3U9Qqi31pP72fKmLLgC8HZGzA5JkUqf6SI-fzio_bB5qWz93-mYq69jfByftdBG&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDVoy2pDSqDBXh2MLNBBaNPWJABsizMsIlDx_V9S-0u9w&oe=6598C933">Quà Noel</a>
+        </div>
+
+        <div class="item item3">
+            <img src="image/qua3.jpg" alt="Quà">
+            <a href="https://scontent.fhan17-1.fna.fbcdn.net/v/t1.6435-9/74604713_779516182480929_6394708856336809984_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=OM5c2opYx2kAX9E3xcK&_nc_ht=scontent.fhan17-1.fna&oh=00_AfBjTk5OfIl6Sqf3lozfCl9n207LqLqeFXi2_1RBcKVQEg&oe=6598BB3E">Quà Noel</a>
+        </div>
+
+        <div class="item item4">
+            <img src="image/qua4.jpg" alt="Quà">
+            <a href="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/385487445_1739556646476873_5702595872322583346_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=Xx4MISpFgdIAX8cA4RQ&_nc_ht=scontent.fhan17-1.fna&oh=00_AfAA3pHqX8ZHBNmXbkodSX-XA3FxPw8kbAFT6fUC6X7p7g&oe=65760F55">Quà Noel</a>
+        </div>
+        
+        <h2>
+            MERRY CHRISTMAS - MR Bình
+        </h2>
+         
+    </div>
+
+    <style>
+        #snowflakeContainer{
+            position:absolute;
+            left:0px;
+            top:0px;
+        }
+        .snowflake{padding-left:15px;
+            font-size:14px;
+            line-height:24px;
+            position:fixed;
+            color:#ebebeb;
+            user-select:none;
+            z-index:1000;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            -khtml-user-select:none;
+            -webkit-user-select:none;
+            -webkit-touch-callout:none;
+        }
+        .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+        //<![CDATA[
+        var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;
+        var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);
+        var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;
+        var resetPosition=false;
+        function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);
+        window.addEventListener("resize",setResetFlag,false)}setup();
+        function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;
+            this.radius=a;
+            this.speed=d;
+            this.xPos=e;
+            this.yPos=c;
+            this.counter=0;
+            this.sign=Math.random()<0.5?1:-1;
+            this.element.style.opacity=0.5+Math.random();
+            this.element.style.fontSize=4+Math.random()*50+"px"}Snowflake.prototype.update=function(){
+                this.counter+=this.speed/5000;
+                this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;
+                this.yPos+=Math.sin(this.counter)/40+this.speed/30;
+                setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));
+                if(this.yPos>browserHeight){this.yPos=-50}};
+                function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";
+                a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");
+                var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;
+                for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);
+                    var a=getPosition(50,browserHeight);
+                    var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);
+                    snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}
+                    function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}
+                    function setResetFlag(a){resetPosition=true};
+        //]]>
+    </script>
+</body>
+</html>
